@@ -1,6 +1,11 @@
-#[macro_use] extern crate rocket;
+#[macro_use]
+extern crate rocket;
 
-use solana_usdc_indexer::handlers::get_usdc_transfers;
+mod handlers;
+mod solana_client;
+mod models;
+
+use handlers::get_usdc_transfers;
 
 #[launch]
 fn rocket() -> _ {
