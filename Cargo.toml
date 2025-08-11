@@ -1,0 +1,17 @@
+[package]
+name = "solana_usdc_indexer"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+tokio = { version = "1.36", features = ["full"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+reqwest = { version = "0.11", features = ["json", "rustls-tls"] }
+rocket = { version = "0.5.0-rc.3", features = ["json"] }
+solana-client = "1.16"             # Solana RPC client
+solana-sdk = "1.16"                # Solana core types
+chrono = "0.4"                     # For date/time handling
+dotenv = "0.15"                    # For env variables
+log = "0.4"
+env_logger = "0.9"
