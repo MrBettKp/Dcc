@@ -1,6 +1,7 @@
 use rocket::serde::json::Json;
-use crate::solana_client::fetch_usdc_transfers;
 use rocket::http::Status;
+
+use crate::solana_client::{fetch_usdc_transfers, Transfer};
 
 #[get("/usdc-transfers/<wallet_address>")]
 pub async fn get_usdc_transfers(wallet_address: &str) -> Result<Json<Vec<Transfer>>, Status> {
