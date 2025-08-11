@@ -7,11 +7,11 @@ edition = "2021"
 tokio = { version = "1.36", features = ["full"] }
 serde = { version = "1.0", features = ["derive"] }
 serde_json = "1.0"
-reqwest = { version = "0.11", features = ["json", "rustls-tls"] }
-rocket = { version = "0.5.0-rc.3", features = ["json"] }
-solana-client = "1.16"             # Solana RPC client
-solana-sdk = "1.16"                # Solana core types
-chrono = "0.4"                     # For date/time handling
-dotenv = "0.15"                    # For env variables
+rocket = { version = "0.5.0-rc.3", features = ["json","tokio"] }
+solana-client = "1.16"
+solana-sdk = { version = "1.16", features = ["full"] }
+spl-token = "3.5.0"
+chrono = { version = "0.4", features = ["serde"] }
+anyhow = "1.0"
 log = "0.4"
 env_logger = "0.9"
